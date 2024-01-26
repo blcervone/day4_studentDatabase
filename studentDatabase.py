@@ -52,7 +52,7 @@ foodList = ['Gyro', 'Pizza', 'Sushi', 'Mediterranean', 'Crab']
 
 keep_going = 'y'
 
-while keep_going == 'y':
+while keep_going != 'n':
     menu_choice = menu1_print_select()
     match menu_choice:
         case 1:
@@ -60,6 +60,11 @@ while keep_going == 'y':
                 print("{0}. {1}".format((int(nameList.index(name)) + 1), name))
             print()
             keep_going = input("Return to main menu? (y/n) ")
+            if keep_going != 'y' or keep_going != 'n':
+                print("Invalid choice! Please choose 'y' or 'n'")
+                keep_going = input("Return to main menu? (y/n) ")
+            else:
+                pass
         case 2:
             search_choice = int(input("Would you like to search by: 1) number (1-5) or 2) name "))
             match search_choice:
@@ -67,6 +72,11 @@ while keep_going == 'y':
                     student_choice = int(input("Enter student number (1 - 5): "))
                     info_selection(student_choice)
                     keep_going = input("Return to main menu? (y/n) ")
+                    if keep_going != 'y' or keep_going != 'n':
+                        print("Invalid choice! Please choose 'y' or 'n'")
+                        keep_going = input("Return to main menu? (y/n) ")
+                    else:
+                        pass
                 case 2:
                     name_search = input("Enter the name of the student you're searching for: ")
                     name_search2 = name_search.capitalize()
@@ -81,5 +91,10 @@ while keep_going == 'y':
                     student_choice = selected_index + 1
                     info_selection(student_choice)
                     keep_going = input("Return to main menu? (y/n) ")
+                    if keep_going != 'y' or keep_going != 'n':
+                        print("Invalid choice! Please choose 'y' or 'n'")
+                        keep_going = input("Return to main menu? (y/n) ")
+                    else:
+                        pass
         case 3:
                 keep_going = 'n'
