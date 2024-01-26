@@ -66,7 +66,7 @@ while keep_going != 'n':
             else:
                 pass
         case 2:
-            search_choice = int(input("Would you like to search by: 1) number (1-5) or 2) name "))
+            search_choice = int(input("Would you like to search by: Select either 1) number (1-5) or 2) name "))
             match search_choice:
                 case 1:
                     student_choice = int(input("Enter student number (1 - 5): "))
